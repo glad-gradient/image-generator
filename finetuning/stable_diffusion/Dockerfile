@@ -4,7 +4,7 @@ FROM python:3.8
 RUN apt-get update && apt-get install -y \
 wget
 
-RUN wget -q https://raw.githubusercontent.com/huggingface/diffusers/main/examples/text_to_image/train_text_to_image.py -O ./train_text_to_image.py
+RUN wget -q https://raw.githubusercontent.com/huggingface/diffusers/main/examples/text_to_image/train_text_to_image.py -O /app/train_text_to_image.py
 
 RUN pip install --upgrade pip
 COPY requirements.txt /app/
