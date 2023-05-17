@@ -1,0 +1,9 @@
+torch
+torchvision
+xformers
+datasets
+transformers
+scipy
+ftfy
+accelerate
+git+https://github.com/huggingface/diffusers.git

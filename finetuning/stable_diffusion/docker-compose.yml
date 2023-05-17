@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  sd_tuning:
+    image: nvidia/cuda:11.0-base
+    container_name: sd_tuning
+    build:
+      context: ./
+      dockerfile: finetuning/stable_diffusion/Dockerfile
+    command: nvidia-smi
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    volumes:
+      - ./data/train/:/app/data/train/
+      - ./data/models/:/app/data/models/
