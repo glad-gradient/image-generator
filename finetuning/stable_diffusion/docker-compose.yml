@@ -8,7 +8,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     runtime: nvidia
-    command: nvidia-smi
+#    command: nvidia-smi
     deploy:
       resources:
         reservations:
