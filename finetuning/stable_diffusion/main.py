@@ -38,6 +38,7 @@ def main():
             "--max_grad_norm=1",
             "--lr_scheduler='constant'", "--lr_warmup_steps=0",
             f"--output_dir={OUTPUT_DIR}",
+            # f"--resume_from_checkpoint={}",
             "--enable_xformers_memory_efficient_attention",
             f"--dataloader_num_workers={n_cpu}",
             f"--validation_prompts={validation_prompt}", # str
