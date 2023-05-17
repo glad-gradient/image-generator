@@ -36,7 +36,7 @@ def main():
             f"--max_train_steps={max_train_steps}",
             f"--learning_rate={learning_rate}",
             "--max_grad_norm=1",
-            "--lr_scheduler='constant'", "--lr_warmup_steps=0",
+            "--lr_scheduler=constant", "--lr_warmup_steps=0",
             f"--output_dir={OUTPUT_DIR}",
             # f"--resume_from_checkpoint={}",
             "--enable_xformers_memory_efficient_attention",
