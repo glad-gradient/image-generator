@@ -16,5 +16,5 @@ services:
               count: 1
               capabilities: [gpu]
     volumes:
-      - ./data/train/:/app/data/train/
+      - ./data/dataset/:/app/data/dataset/
       - ./data/models/:/app/data/models/
