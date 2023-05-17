@@ -32,7 +32,7 @@ def main():
             f"--train_batch_size={batch_size}",
             f"--gradient_accumulation_steps={gradient_accumulation_steps}",  # default=1
             "--gradient_checkpointing",
-            "--mixed_precision='fp16'",
+            "--mixed_precision=fp16",
             f"--max_train_steps={max_train_steps}",
             f"--learning_rate={learning_rate}",
             "--max_grad_norm=1",
