@@ -3,10 +3,17 @@ import subprocess
 import logging
 from multiprocessing import cpu_count
 
+import torch
+
 logging.basicConfig(level=logging.INFO)
 
 
 def main():
+    print(torch.cuda.is_available())
+    print(torch.cuda.current_device())
+    print(torch.cuda.get_device_name(0))
+    print('*******************************************')
+
     with open("configs.json") as f:
         configs = json.load(f)
 
