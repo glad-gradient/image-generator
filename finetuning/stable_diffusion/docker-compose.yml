@@ -17,5 +17,5 @@ services:
               count: all
               capabilities: [gpu]
     volumes:
-      - ./data/dataset/:./data/dataset/
-      - ./data/models/:./data/models/
+      - ./data/dataset/:/data/dataset/
+      - ./data/models/:/data/models/
