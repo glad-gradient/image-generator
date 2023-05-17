@@ -6,7 +6,7 @@ services:
     container_name: sd_tuning
     build:
       context: ./
-      dockerfile: finetuning/stable_diffusion/Dockerfile
+      dockerfile: Dockerfile
     command: nvidia-smi
     deploy:
       resources:
