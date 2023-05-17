@@ -2,7 +2,7 @@ version: "3"
 
 services:
   sd_tuning:
-    image: nvidia/cuda:11.0-base
+    image: nvidia/cuda:11.7-base
     container_name: sd_tuning
     build:
       context: ./
