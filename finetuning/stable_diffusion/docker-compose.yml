@@ -7,13 +7,14 @@ services:
     build:
       context: ./
       dockerfile: Dockerfile
+    runtime: nvidia
     command: nvidia-smi
     deploy:
       resources:
         reservations:
           devices:
             - driver: nvidia
-              count: 1
+              count: all
               capabilities: [gpu]
     volumes:
       - ./data/dataset/:/app/data/dataset/
