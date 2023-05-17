@@ -14,7 +14,8 @@ def main():
     learning_rate = configs["LEARNING_RATE"]
     batch_size = configs["BATCH_SIZE"]
     gradient_accumulation_steps = configs["GRADIENT_ACCUMULATION_STEPS"]
-    n_cpu = cpu_count()
+    # n_cpu = cpu_count()
+    n_cpu = 1
     validation_prompt = configs["VALIDATION_PROMPT"]
     checkpointing_steps = configs["CHECKPOINTING_STEPS"]
     validation_epochs = configs["VALIDATION_EPOCHS"]
