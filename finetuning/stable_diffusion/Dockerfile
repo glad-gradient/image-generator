@@ -7,6 +7,7 @@ wget
 RUN wget -q https://raw.githubusercontent.com/huggingface/diffusers/main/examples/text_to_image/train_text_to_image.py -P app/
 
 RUN pip3 uninstall torch torchvision -y
+RUN pip uninstall bitsandbytes
 
 RUN pip install --upgrade pip
 COPY requirements.txt /app/
