@@ -10,6 +10,7 @@ RUN pip3 uninstall torch torchvision -y
 
 RUN pip install --upgrade pip
 COPY requirements.txt /app/
+RUN pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 --index-url https://download.pytorch.org/whl/cu118
 RUN pip install -r /app/requirements.txt
 
 # RUN accelerate config default # Sets the device to CPU and raises RuntimeError "slow_conv2d_cpu" not implemented for 'Half'
