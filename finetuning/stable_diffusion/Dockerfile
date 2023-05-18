@@ -6,7 +6,7 @@ wget
 
 RUN wget -q https://raw.githubusercontent.com/huggingface/diffusers/main/examples/text_to_image/train_text_to_image.py -P app/
 
-ENV LD_LIBRARY_PATH="/usr/lib/wsl/lib/"
+# ENV LD_LIBRARY_PATH="/usr/lib/wsl/lib/"
 RUN pip3 uninstall torch torchvision -y
 RUN pip uninstall bitsandbytes
 
