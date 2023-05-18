@@ -7,7 +7,7 @@ FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 # RUN apt-get install -y python3.8
 
 RUN apt update && apt upgrade -y
-RUN apt install python3.8 -y
+RUN apt install python3 -y
 
 RUN apt-get update && apt-get install -y \
 wget
