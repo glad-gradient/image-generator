@@ -47,7 +47,7 @@ def main():
             "--lr_scheduler=constant", "--lr_warmup_steps=0",
             f"--output_dir={OUTPUT_DIR}",
             # f"--resume_from_checkpoint={}",
-            # "--enable_xformers_memory_efficient_attention",
+            "--enable_xformers_memory_efficient_attention",
             f"--dataloader_num_workers={n_cpu}",
             f"--validation_prompts={validation_prompt}", # str
             f"--checkpointing_steps={checkpointing_steps}", # default=500,
