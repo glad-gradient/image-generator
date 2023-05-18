@@ -2,7 +2,7 @@ version: "3"
 
 services:
   sd_tuning:
-    image: nvidia/cuda:11.8-base
+    image: nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
     container_name: sd_tuning
     build:
       context: ./
