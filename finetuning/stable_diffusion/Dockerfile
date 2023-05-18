@@ -6,8 +6,10 @@ FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 # RUN apt-get update
 # RUN apt-get install -y python3.8
 
+RUN apt update && apt upgrade -y
+RUN apt install python3.8 -y
+
 RUN apt-get update && apt-get install -y \
-python3.8 \
 wget
 
 RUN wget -q https://raw.githubusercontent.com/huggingface/diffusers/main/examples/text_to_image/train_text_to_image.py -P app/
