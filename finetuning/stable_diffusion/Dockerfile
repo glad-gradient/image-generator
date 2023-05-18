@@ -1,12 +1,10 @@
 FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 
 # Install any necessary dependencies
-RUN apt-get install software-properties-common
-RUN add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get update
-RUN apt-get install python3.8
-
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
+apt-get install software-properties-common \
+add-apt-repository ppa:deadsnakes/ppa \
+apt-get install python3.8 \
 wget
 
 RUN wget -q https://raw.githubusercontent.com/huggingface/diffusers/main/examples/text_to_image/train_text_to_image.py -P app/
