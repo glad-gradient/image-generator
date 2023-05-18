@@ -1,4 +1,4 @@
-FROM python:3.8
+FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 
 # Install any necessary dependencies
 RUN apt-get update && apt-get install -y \
@@ -11,6 +11,7 @@ RUN pip3 uninstall torch torchvision -y
 RUN pip uninstall bitsandbytes
 
 RUN pip install --upgrade pip
+pip install python==3.8
 COPY requirements.txt /app/
 RUN pip install torch==2.0.0+cu118 torchvision==0.15.1+cu118 --index-url https://download.pytorch.org/whl/cu118
 RUN pip install -r /app/requirements.txt
