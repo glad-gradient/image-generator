@@ -1,14 +1,17 @@
 FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 
 # Install any necessary dependencies
-RUN apt-get update && apt-get install -y \
+RUN sudo apt-get install software-properties-common
+RUN sudo add-apt-repository ppa:deadsnakes/ppa
+RUN sudo apt-get update
+RUN sudo apt-get install python3.8
+
+RUN apt-get install -y \
 wget
 
 RUN wget -q https://raw.githubusercontent.com/huggingface/diffusers/main/examples/text_to_image/train_text_to_image.py -P app/
 
 RUN pip install --upgrade pip
-RUN pip install python==3.8
-
 # ENV LD_LIBRARY_PATH="/usr/lib/wsl/lib/"
 RUN pip3 uninstall torch torchvision -y
 RUN pip uninstall bitsandbytes -y
