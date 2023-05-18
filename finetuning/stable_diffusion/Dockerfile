@@ -7,7 +7,7 @@ FROM nvidia/cuda:11.8.0-cudnn8-devel-ubuntu20.04
 # RUN apt-get install -y python3.8
 
 RUN apt update && apt upgrade -y
-RUN apt install python3 -y
+# RUN apt install python3 -y
 
 RUN apt-get update && apt-get install -y \
 wget
@@ -16,6 +16,7 @@ RUN wget -q https://raw.githubusercontent.com/huggingface/diffusers/main/example
 
 RUN pip install --upgrade pip
 # ENV LD_LIBRARY_PATH="/usr/lib/wsl/lib/"
+ENV LD_LIBRARY_PATH="/usr/local/cuda/lib64/"
 RUN pip3 uninstall torch torchvision -y
 RUN pip uninstall bitsandbytes -y
 
