@@ -10,7 +10,7 @@ RUN pip install --upgrade pip
 COPY requirements.txt /app/
 RUN pip install -r /app/requirements.txt
 
-# RUN accelerate config default
+# RUN accelerate config default # Sets the device to CPU and raises RuntimeError "slow_conv2d_cpu" not implemented for 'Half'
 
 COPY . /app/
 WORKDIR /app/
